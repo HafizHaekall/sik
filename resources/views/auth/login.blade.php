@@ -15,11 +15,10 @@
   </div>
 
   @if(session('error'))
-
-            <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
-            <span class="font-medium"> <b>Opps!</b> </span> {{session('error')}}.
-            </div>
-            @endif
+    <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+      <span class="font-medium"> <b>Opps!</b> </span> {{session('error')}}.
+    </div>
+  @endif
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
     <form class="space-y-6" action="{{ route('actionlogin') }}" method="post">
     @csrf
@@ -43,7 +42,7 @@
         <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
       </div>
     </form>
-    <p class="text-center mt-10">Belum punya akun? <a class="underline text-[blue] hover:text-black" href="#">Register</a> sekarang!</p>
+    <p class="text-center mt-10">Belum punya akun? <a class="underline text-[blue] hover:text-black" href="{{ route('register') }}">Register</a> sekarang!</p>
   </div>
 </div>
 </body>

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->index('id_barang');
             $table->string('nama_produk')->unique();
             $table->string('merk')->nullable();
-            $table->integer('harga');
+            $table->bigInteger('harga');
             $table->string('image')->nullable();
             $table->timestamps();
         });
